@@ -1,6 +1,9 @@
 # secrets
 .env
 
+# generated project doc (not tracked)
+Nocturne_Archive_Project.pdf
+
 # vector DB (regenerated from data/)
 chroma_db/
 
