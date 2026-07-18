@@ -1,0 +1,10 @@
+{
+  "available": true,
+  "total": 16,
+  "evaluated": 16,
+  "answer_correctness": { "correct": 16, "of": 16, "pct": 100 },
+  "retrieval_hit_rate": { "hits": 15, "of": 15, "pct": 100 },
+  "idk_honesty": { "correct": 1, "of": 1, "pct": 100 },
+  "avg_confidence": 1.0,
+  "self_correction_rate": { "count": 0, "of": 16, "pct": 0 }
+}

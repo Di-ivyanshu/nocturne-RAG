@@ -1,0 +1,14 @@
+## Self-Correcting RAG Knowledge Assistant — dependencies (all free)
+groq>=0.11.0                     # Groq LLM (generous free tier) — default provider
+google-generativeai>=0.8.0      # Gemini LLM (alternative provider)
+sentence-transformers>=3.0.0    # local embeddings (free, offline)
+chromadb>=0.5.0                 # local vector DB
+pymupdf>=1.24.0                 # PDF text + table extraction (primary)
+pypdf>=4.2.0                    # PDF text extraction (fallback)
+python-docx>=1.1.0              # DOCX text extraction
+rank-bm25>=0.2.2                # keyword search for hybrid retrieval
+streamlit>=1.36.0              # alternative simple web UI
+fastapi>=0.110.0               # backend for the custom Nocturne Archive UI
+uvicorn>=0.29.0                # ASGI server for FastAPI
+python-multipart>=0.0.9        # file uploads for FastAPI
+python-dotenv>=1.0.0            # .env config

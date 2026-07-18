@@ -1,0 +1,24 @@
+# secrets
+.env
+
+# vector DB (regenerated from data/)
+chroma_db/
+
+# user documents (don't commit private docs; keep sample_docs/ instead)
+data/*
+!data/.gitkeep
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# model cache
+.cache/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

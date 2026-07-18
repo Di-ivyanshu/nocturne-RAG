@@ -1,0 +1,82 @@
+[
+  {
+    "question": "How many days of paid annual leave do full-time employees get?",
+    "expected_answer": "20 days of paid annual leave per year.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "How far in advance must annual leave be requested?",
+    "expected_answer": "At least 7 days in advance.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What is the maximum number of leave days that can be carried over?",
+    "expected_answer": "A maximum of 5 days.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "How many sick leave days are allowed per year?",
+    "expected_answer": "10 days of sick leave per year.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "When is a medical certificate required for sick leave?",
+    "expected_answer": "For sick leave longer than 3 consecutive days.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What are the standard working hours?",
+    "expected_answer": "9:30 AM to 6:30 PM, Monday to Friday.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "How many days per week can employees work remotely?",
+    "expected_answer": "Up to 2 days per week with manager approval.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "Within how many business days are expenses reimbursed?",
+    "expected_answer": "Within 15 business days.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What is the daily meal reimbursement limit during business travel?",
+    "expected_answer": "Up to 1500 rupees per day.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "How long is the probation period for new employees?",
+    "expected_answer": "6 months.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What is the notice period after confirmation?",
+    "expected_answer": "2 months.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What is the notice period during probation?",
+    "expected_answer": "15 days.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "How often must passwords be changed?",
+    "expected_answer": "Every 90 days.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What is the minimum password length?",
+    "expected_answer": "At least 12 characters.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "Within how many hours must a security incident be reported?",
+    "expected_answer": "Within 24 hours.",
+    "source": "company_handbook.md"
+  },
+  {
+    "question": "What is the capital of France?",
+    "expected_answer": "I don't know based on the provided documents.",
+    "source": null
+  }
+]

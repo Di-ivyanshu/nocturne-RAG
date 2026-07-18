@@ -1,0 +1,3 @@
+# Development / test dependencies (the unit tests mock heavy layers, so this is tiny).
+pytest>=8.0.0
+python-dotenv>=1.0.0

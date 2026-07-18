@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nocturne Archive — Self-Verifying Knowledge Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="lamp"></span>
+    <span class="grain"></span>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <svg class="mark" viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.4"/>
+        <circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+        <path d="M12.4 16.2l2.6 2.6 5-5.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Nocturne<span class="brand-thin">Archive</span></span>
+      <span class="byline mono">by Divyanshu</span>
+    </a>
+    <nav class="topnav">
+      <span class="pill"><span class="dot"></span><b id="chunkCount">0</b> chunks</span>
+    </nav>
+  </header>
+
+  <main class="app">
+    <!-- knowledge panel — the catalog -->
+    <aside class="panel knowledge">
+      <div class="panel-head">
+        <div class="head-titles">
+          <span class="eyebrow">The Catalog</span>
+          <h2>Knowledge</h2>
+        </div>
+        <span class="count-chip"><b id="chunkCount2">0</b> chunks</span>
+      </div>
+
+      <div class="panel-scroll">
+        <label class="dropzone" id="dropzone" tabindex="0">
+          <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt,.md" hidden />
+          <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true">
+            <path d="M12 16V4m0 0l-4 4m4-4l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 16v2.5A1.5 1.5 0 005.5 20h13a1.5 1.5 0 001.5-1.5V16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="dz-title">Add to the archive</span>
+          <span class="dz-sub">PDF · DOCX · TXT · MD — drop or click</span>
+        </label>
+
+        <ul class="filelist" id="filelist"></ul>
+        <div class="proc" id="indexLoader" hidden></div>
+
+        <!-- indexed documents (manage) -->
+        <div class="docs" id="docs">
+          <div class="docs-head">Indexed documents</div>
+          <ul class="doclist" id="doclist"></ul>
+        </div>
+      </div>
+
+      <div class="panel-actions">
+        <button class="btn btn-primary full" id="buildBtn" disabled>Build index</button>
+        <button class="btn btn-ghost" id="clearBtn">Clear</button>
+      </div>
+    </aside>
+
+    <!-- ask console — the desk -->
+    <section class="panel console">
+      <div class="panel-head">
+        <div class="head-titles">
+          <span class="eyebrow">The Desk</span>
+          <h2>Ask</h2>
+        </div>
+        <div class="head-right">
+          <span class="hint" id="memHint">New conversation</span>
+          <button class="btn-pill ghost" id="newChatBtn">New chat</button>
+        </div>
+      </div>
+
+      <div class="thread" id="thread">
+        <div class="empty" id="emptyState">
+          <div class="empty-glyph mono">§</div>
+          <p class="empty-lead">Ask a question of your indexed documents.</p>
+          <p class="empty-sub">Every answer is filed against its source, with a page citation and a verification stamp. Follow-ups are read in context.</p>
+          <div class="samples" id="samples">
+            <button class="chip">How do I turn on face lock?</button>
+            <button class="chip">How do I take a screenshot?</button>
+            <button class="chip">What are the ranked mode rules?</button>
+          </div>
+        </div>
+      </div>
+
+      <form class="composer" id="composer">
+        <input id="qInput" type="text" autocomplete="off"
+               placeholder="Ask something — or a follow-up…" />
+        <button class="send" type="submit" aria-label="Ask">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h13m0 0l-5-5m5 5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
